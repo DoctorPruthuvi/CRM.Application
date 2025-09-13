@@ -1,36 +1,132 @@
-﻿/* Custom styles for CRM */
-.page {
+﻿/* Table specific styles */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 0.75rem;
+    white-space: nowrap;
 }
 
-.main {
-    padding: 0;
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-color: #e9ecef;
 }
 
-.content {
-    background: white;
-    min-height: 100vh;
-    margin: 0;
-    padding: 2rem !important;
+/* Make the table more compact */
+.table {
+    font-size: 0.9rem;
 }
 
+    /* Column specific widths */
+    .table th:nth-child(1), .table td:nth-child(1) {
+        width: 80px;
+    }
+    /* ID */
+    .table th:nth-child(2), .table td:nth-child(2) {
+        width: 150px;
+    }
+    /* Name */
+    .table th:nth-child(3), .table td:nth-child(3) {
+        width: 200px;
+    }
+    /* Email */
+    .table th:nth-child(4), .table td:nth-child(4) {
+        width: 120px;
+    }
+    /* Phone */
+    .table th:nth-child(5), .table td:nth-child(5) {
+        min-width: 200px;
+    }
+    /* Address */
+    .table th:nth-child(6), .table td:nth-child(6) {
+        width: 120px;
+    }
+    /* City */
+    .table th:nth-child(7), .table td:nth-child(7) {
+        width: 100px;
+    }
+    /* State */
+    .table th:nth-child(8), .table td:nth-child(8) {
+        width: 120px;
+    }
+    /* Country */
+    .table th:nth-child(9), .table td:nth-child(9) {
+        width: 120px;
+    }
+    /* Created Date */
+    .table th:nth-child(10), .table td:nth-child(10) {
+        width: 100px;
+    }
+/* Actions */
+
+/* Hover effects */
 .table-hover tbody tr:hover {
     background-color: #f8f9fa;
-    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.modal-backdrop {
-    opacity: 0.5;
+/* Badge styling */
+.badge {
+    font-size: 0.8em;
+    padding: 0.4em 0.6em;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .content {
+/* Action buttons */
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Responsive table */
+@media (max-width: 1200px) {
+    .table {
+        font-size: 0.85rem;
+    }
+
+        .table th, .table td {
+            padding: 0.5rem;
+        }
+}
+
+@media (max-width: 992px) {
+    .container-fluid {
         padding: 1rem !important;
     }
 
-    .display-6 {
-        font-size: 1.5rem;
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+}
+
+/* Email and phone links */
+a.text-decoration-none {
+    color: inherit;
+}
+
+    a.text-decoration-none:hover {
+        color: #667eea;
+    }
+
+/* Card footer */
+.card-footer {
+    background: #f8f9fa !important;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Empty state responsive */
+@media (max-width: 768px) {
+    .text-center.py-5 {
+        padding: 2rem 1rem !important;
+    }
+
+    .fa-5x {
+        font-size: 3em !important;
     }
 }

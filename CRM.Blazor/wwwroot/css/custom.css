@@ -1,0 +1,36 @@
+﻿/* Custom styles for CRM */
+.page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.main {
+    padding: 0;
+}
+
+.content {
+    background: white;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    opacity: 0.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.5rem;
+    }
+}
